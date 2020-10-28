@@ -1,7 +1,14 @@
 import React from 'react';
 
-const Clientes = React.lazy(() => import('./components/clientes'));
-const Productos = React.lazy(() => import('./components/productos'));
+const Clientes = React.lazy(() => import('./components/clientes/Index'));
+const NuevoCliente = React.lazy(() => import('./components/clientes/nuevo/Index'));
+const DetalleCliente = React.lazy(() => import('./components/clientes/detalle/Index'));
+const EditarCliente = React.lazy(() => import('./components/clientes/editar/Index'));
+
+const Productos = React.lazy(() => import('./components/productos/Index'));
+const NuevoProducto = React.lazy(() => import('./components/productos/nuevo/Index'));
+const DetalleProducto = React.lazy(() => import('./components/productos/detalle/Index'));
+const EditarProducto = React.lazy(() => import('./components/productos/editar/Index'));
 
 const Toaster = React.lazy(() => import('./views/notifications/toaster/Toaster'));
 const Tables = React.lazy(() => import('./views/base/tables/Tables'));
@@ -86,8 +93,17 @@ const routes = [
 
 
   { path: '/clientes', exact: true,  name: 'Clientes', component: Clientes },
+  { path: '/clientes/nuevo', exact: true,  name: 'Nuevo cliente', component: NuevoCliente },
+  { path: '/clientes/detalle/:id', exact: true,  name: 'Detalle cliente', component: DetalleCliente },
+  { path: '/clientes/editar/:id', exact: true, name: 'Editar cliente', component: EditarCliente },
+
+
   { path: '/productos', exact: true,  name: 'Productos', component: Productos },
+  { path: '/productos/nuevo', exact: true,  name: 'Nuevo producto', component: NuevoProducto },
+  { path: '/productos/detalle/:id', exact: true,  name: 'Detalle producto', component: DetalleProducto },
+  { path: '/productos/editar/:id', exact: true,  name: 'Editar producto', component: EditarProducto },
   
+
 ];
 
 export default routes;

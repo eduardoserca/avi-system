@@ -7,7 +7,6 @@ import {
   CButton,
   CCard,
   CCardBody,
-
   CCardGroup,
   CCol,
   CContainer,
@@ -18,7 +17,7 @@ import {
   CInputGroupText,
   CRow
 } from '@coreui/react'
-import CIcon from '@coreui/icons-react'
+import CIcon from '@coreui/icons-react';
 
 const Login = () => {
 
